@@ -3,98 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TownCenter Barrio Jara | Inversión desde USD 38.900</title>
+    <title>TownCenter Barrio Jara | Century 21</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        c21gold: '#c4a47c',
+                        c21black: '#000000',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .btn-float { position: fixed; bottom: 20px; right: 20px; z-index: 100; }
+        .gold-gradient { background: linear-gradient(145deg, #c4a47c, #a68a64); }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<body class="bg-white font-sans text-c21black">
 
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <a href="https://wa.me/595991712966?text=Hola%20Jairo,%20quiero%20info%20de%20TownCenter" class="btn-float bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold text-blue-900 uppercase">Century 21 <span class="text-gray-400 font-light">| TownCenter</span></div>
-            <a href="#contacto" class="bg-yellow-600 hover:bg-yellow-700 text-white px-5 py-2 rounded-full font-semibold transition text-sm">Consultar</a>
+            <div class="text-2xl font-bold tracking-tighter">CENTURY 21</div>
+            <a href="#contacto" class="border-2 border-c21gold text-c21gold px-6 py-2 rounded-none font-bold hover:bg-c21gold hover:text-white transition tracking-widest text-xs">CONTACTAR</a>
         </div>
     </nav>
 
-    <section class="relative bg-slate-900 text-white py-16">
+    <section class="bg-c21black text-white py-20 border-b-4 border-c21gold">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold uppercase mb-4 inline-block">Venta en Pozo</span>
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-                    El mejor precio de <br><span class="text-yellow-500 text-3xl md:text-4xl">Barrio Jara - Asunción</span>
+                <h1 class="text-5xl md:text-6xl font-light mb-2 tracking-tighter">
+                    TOWN<span class="font-bold text-c21gold text-6xl md:text-7xl">CENTER</span>
                 </h1>
-                <p class="text-lg mb-8 text-gray-300">
-                    Rentabilidad proyectada del 7.5% anual. A pasos de la Universidad Americana.
+                <p class="text-xl mb-10 font-light tracking-[0.2em] uppercase text-gray-400">
+                    Barrio Jara · Asunción
                 </p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-white/5 p-3 rounded-lg border border-white/10">
-                        <p class="text-xs text-gray-400">Monoambientes</p>
-                        <p class="text-xl font-bold text-yellow-500 italic text-sm md:text-lg">USD 38.900</p>
+                <div class="space-y-6">
+                    <div class="border-l-2 border-c21gold pl-6">
+                        <p class="text-sm uppercase tracking-widest text-gray-500 mb-1">Monoambientes desde</p>
+                        <p class="text-3xl font-bold text-c21gold">USD 38.900 [cite: 11]</p>
                     </div>
-                    <div class="bg-white/5 p-3 rounded-lg border border-white/10">
-                        <p class="text-xs text-gray-400">1 Dormitorio</p>
-                        <p class="text-xl font-bold text-yellow-500 italic text-sm md:text-lg">USD 56.800</p>
+                    <div class="border-l-2 border-c21gold pl-6">
+                        <p class="text-sm uppercase tracking-widest text-gray-500 mb-1">1 Dormitorio desde</p>
+                        <p class="text-3xl font-bold text-c21gold text-sm md:text-3xl font-bold">USD 56.800 [cite: 6]</p>
                     </div>
                 </div>
             </div>
-            <div class="md:w-1/2 md:pl-10">
-                <img src="edificio.jpg" alt="TownCenter" class="rounded-2xl shadow-2xl border-4 border-white/10">
+            <div class="md:w-1/2">
+                <img src="edificio.jpg" alt="TownCenter Render" class="shadow-2xl border border-gray-800">
             </div>
         </div>
     </section>
 
-    <section class="py-12 bg-white border-b">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="flex items-start">
-                <i class="fas fa-university text-yellow-500 text-2xl mt-1 mr-4"></i>
-                <div>
-                    <h4 class="font-bold">Ubicación Premium</h4>
-                    <p class="text-sm text-gray-600">A 2 cuadras de la Americana. Alta demanda estudiantil.</p>
-                </div>
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="text-center">
+                <h3 class="text-c21gold font-bold text-4xl mb-2">7.5% </h3>
+                <p class="uppercase tracking-widest text-xs font-bold mb-4">Rentabilidad Anual </p>
+                <p class="text-gray-500 text-sm italic">Proyección ideal para inversores en zona de alta demanda universitaria. [cite: 33, 55]</p>
             </div>
-            <div class="flex items-start">
-                <i class="fas fa-hand-holding-usd text-yellow-500 text-2xl mt-1 mr-4"></i>
-                <div>
-                    <h4 class="font-bold">Financiación Propia</h4>
-                    <p class="text-sm text-gray-600">Entrega 20% y cuotas sin intereses durante la obra.</p>
-                </div>
+            <div class="text-center border-x border-gray-100 px-4">
+                <h3 class="text-c21black font-bold text-4xl mb-2 italic italic italic">2 CUADRAS </h3>
+                <p class="uppercase tracking-widest text-xs font-bold mb-4 italic italic italic italic">De la Americana </p>
+                <p class="text-gray-500 text-sm italic italic italic">Ubicación privilegiada en el corazón de Barrio Jara. [cite: 34, 58]</p>
             </div>
-            <div class="flex items-start">
-                <i class="fas fa-calendar-alt text-yellow-500 text-2xl mt-1 mr-4"></i>
-                <div>
-                    <h4 class="font-bold">Entrega 2027</h4>
-                    <p class="text-sm text-gray-600">Inicio de obra: Enero 2026. Respaldo de 45 años.</p>
-                </div>
+            <div class="text-center">
+                <h3 class="text-c21gold font-bold text-4xl mb-2 italic italic italic">CUOTAS [cite: 48]</h3>
+                <p class="uppercase tracking-widest text-xs font-bold mb-4 italic italic italic italic italic">Sin intereses [cite: 46, 48]</p>
+                <p class="text-gray-500 text-sm italic italic italic italic">Financiación propia durante la obra con entrega del 20%. </p>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-16 bg-gray-50">
+    <section id="contacto" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6 max-w-lg">
-            <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
-                <h3 class="text-2xl font-bold mb-2 text-center italic">¿Querés más información?</h3>
-                <p class="text-center text-gray-500 text-sm mb-8 italic">Recibí la tabla de cuotas y el brochure en tu WhatsApp.</p>
-                
-                <form action="https://n8n.jairokov.com/webhook/20b1203c-4fd0-446b-aedf-f17094645621" method="POST" class="space-y-4">
-                    <div>
-                        <label class="text-xs font-bold uppercase text-gray-400 ml-1">Tu Nombre</label>
-                        <input type="text" name="nombre" required class="w-full p-3 bg-gray-50 rounded-xl border-none focus:ring-2 focus:ring-yellow-500 outline-none" placeholder="Nombre completo">
-                    </div>
-                    <div>
-                        <label class="text-xs font-bold uppercase text-gray-400 ml-1">WhatsApp</label>
-                        <input type="tel" name="whatsapp" required class="w-full p-3 bg-gray-50 rounded-xl border-none focus:ring-2 focus:ring-yellow-500 outline-none" placeholder="Ej: +595 991 123456">
-                    </div>
-                    <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-yellow-500/20 uppercase tracking-tighter">
-                        Solicitar Info del Proyecto
+            <div class="bg-c21black p-12 shadow-2xl relative">
+                <div class="absolute top-0 left-0 w-full h-1 bg-c21gold italic italic italic italic italic italic"></div>
+                <h2 class="text-white text-2xl font-light text-center mb-10 uppercase tracking-[0.3em] italic italic italic italic italic italic italic">Solicitar Disponibilidad</h2>
+                <form action="https://n8n.jairokov.com/webhook/20b1203c-4fd0-446b-aedf-f17094645621" method="POST" class="space-y-8 italic italic italic italic italic italic italic italic">
+                    <input type="text" name="nombre" placeholder="NOMBRE COMPLETO" required class="w-full bg-transparent border-b border-gray-700 py-3 text-white outline-none focus:border-c21gold transition text-sm tracking-widest italic italic italic italic italic italic italic italic italic">
+                    <input type="tel" name="whatsapp" placeholder="WHATSAPP (+595...)" required class="w-full bg-transparent border-b border-gray-700 py-3 text-white outline-none focus:border-c21gold transition text-sm tracking-widest italic italic italic italic italic italic italic italic italic italic">
+                    <button type="submit" class="w-full bg-c21gold text-c21black py-5 font-bold uppercase tracking-[0.2em] hover:bg-white transition duration-500 italic italic italic italic italic italic italic italic italic italic italic">
+                        Enviar Consulta
                     </button>
                 </form>
-                <p class="text-center mt-6 text-xs text-gray-400 font-bold italic">Asesor: Jairo Prieto - Century 21 Bonanza</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 text-center text-gray-400 text-xs">
-        <p>Pedro Ciancio casi Amistad, Barrio Jara, Asunción. <br> © 2026 Jairo Prieto - Todos los derechos reservados.</p>
+    <footer class="bg-white py-12 text-center border-t border-gray-100 italic italic italic italic italic italic italic italic italic italic italic italic">
+        <p class="text-c21black text-xs font-bold uppercase tracking-[0.4em] mb-4 italic italic italic italic italic italic italic italic italic italic italic italic italic">Jairo Prieto · Century 21 Bonanza </p>
+        <p class="text-gray-400 text-[10px] uppercase tracking-widest italic italic italic italic italic italic italic italic italic italic italic italic italic italic">Pedro Ciancio casi Calle Amistad · Asunción [cite: 9, 58, 60]</p>
     </footer>
 
 </body>

@@ -38,7 +38,7 @@
                 <span class="text-xl font-bold tracking-tighter leading-none text-c21black uppercase">Century 21</span>
                 <span class="text-[10px] font-light text-gray-400 tracking-[0.2em] uppercase">Bonanza</span>
             </div>
-            <a href="#contacto" class="bg-c21black text-c21gold px-5 py-2 text-[10px] font-bold tracking-widest uppercase hover:bg-c21gold hover:text-white transition tracking-widest uppercase">Invertir</a>
+            <a href="#contacto" class="bg-c21black text-c21gold px-5 py-2 text-[10px] font-bold tracking-widest uppercase hover:bg-c21gold hover:text-white transition">Invertir</a>
         </div>
     </nav>
 
@@ -62,7 +62,7 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="md:w-1/2">
-                    <h2 class="text-4xl font-bold mb-6 uppercase tracking-tighter">7.5% Renta Anual <br><span class="font-light text-gray-500">con Vacancia Cero</span></h2>
+                    <h2 class="text-4xl font-bold mb-6 uppercase tracking-tighter">7,5% Renta Anual <br><span class="font-light text-gray-500">con Vacancia Cero</span></h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         Ubicado a solo 2 cuadras de la Universidad Americana, este activo garantiza una demanda estudiantil constante. TownCenter te ofrece la rentabilidad que buscas con la seguridad de un alquiler inmediato.
                     </p>
@@ -119,12 +119,12 @@
         <div class="container mx-auto px-6 max-w-5xl">
             <h2 class="text-3xl font-bold text-center uppercase tracking-tighter mb-16">Inversión con Riesgo Cero</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="w-full md:w-1/2 aspect-video rounded-lg overflow-hidden shadow-2xl border-4 border-c21gold">
+                <div class="w-full md:w-1/2 aspect-video rounded-lg overflow-hidden shadow-2xl border-4 border-c21gold bg-c21black">
                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/A0CLFk_jniI?start=766" title="Anuncio TownCenter Barrio Jara" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="w-full md:w-1/2">
                     <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                        Con **Rodolfo Daumas Desarrollos**, que cuenta con 45 años de experiencia, y el respaldo comercial de **Century 21 Bonanza**, tu inversión está en las mejores manos. Además, contamos con financiación pre-aprobada con Itaú y GNB.
+                        Con <strong>Rodolfo Daumas Desarrollos</strong>, que cuenta con 45 años de experiencia, y el respaldo comercial de <strong>Century 21 Bonanza</strong>, tu inversión está en las mejores manos. Además, contamos con financiación pre-aprobada con Itaú y GNB.
                     </p>
                     <div class="grid grid-cols-2 gap-4 text-center">
                         <div class="p-4 bg-gray-50 border border-gray-100"><p class="text-2xl font-bold">45</p><p class="text-[9px] uppercase tracking-widest text-gray-400">Años de Exp.</p></div>
@@ -137,29 +137,51 @@
 
     <section id="contacto" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6 max-w-lg">
-            <div class="p-12 md:p-16 shadow-2xl relative border-t-4 border-c21gold bg-cover bg-center" style="background-image: url('image_6.png');">
-                <div class="absolute inset-0 bg-c21black opacity-70"></div>
-                
-                <div class="relative z-10 text-center">
-                    <h2 class="text-white text-3xl font-bold mb-6 uppercase tracking-[0.3em] drop-shadow-lg">Solicitar Ficha Técnica</h2>
-                    <p class="text-c21gold text-[10px] uppercase tracking-widest mb-12 font-bold drop-shadow-md">
-                        Recibí el brochure oficial y tabla de cuotas por WhatsApp.
-                    </p>
-                    <form action="https://n8n.jairokov.com/webhook/1c64a5fc-178e-4a5f-bb23-93909b21839d" method="POST" class="space-y-10">
-                        <input type="text" name="nombre" placeholder="TU NOMBRE COMPLETO" required class="w-full bg-transparent border-b-2 border-gray-700 py-3 text-white outline-none focus:border-c21gold transition text-sm tracking-widest placeholder-gray-500">
-                        <input type="tel" name="whatsapp" placeholder="TU WHATSAPP" required class="w-full bg-transparent border-b-2 border-gray-700 py-3 text-white outline-none focus:border-c21gold transition text-sm tracking-widest placeholder-gray-500">
-                        <button type="submit" class="w-full bg-c21gold text-c21black py-5 font-bold uppercase tracking-[0.3em] hover:bg-white active:scale-95 transition duration-500 shadow-xl mt-6 drop-shadow-lg">
-                            SOLICITAR FICHA TÉCNICA
-                        </button>
-                    </form>
-                </div>
+            <div class="bg-c21black p-12 md:p-16 shadow-2xl relative border-t-4 border-c21gold">
+                <h2 class="text-white text-2xl font-light text-center mb-10 uppercase tracking-[0.3em]">Solicitar Ficha Técnica</h2>
+                <form action="https://n8n.jairokov.com/webhook/1c64a5fc-178e-4a5f-bb23-93909b21839d" method="POST" class="space-y-10">
+                    <input type="text" name="nombre" placeholder="TU NOMBRE COMPLETO" required class="w-full bg-transparent border-b border-gray-800 py-3 text-white outline-none focus:border-c21gold transition text-xs tracking-widest uppercase">
+                    <input type="tel" name="whatsapp" placeholder="TU WHATSAPP" required class="w-full bg-transparent border-b border-gray-800 py-3 text-white outline-none focus:border-c21gold transition text-xs tracking-widest uppercase">
+                    <button type="submit" class="w-full bg-c21gold text-c21black py-5 font-bold uppercase tracking-[0.3em] hover:bg-white transition duration-500 shadow-xl">
+                        SOLICITAR FICHA TÉCNICA
+                    </button>
+                </form>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white py-12 text-center border-t border-gray-100">
-        <p class="text-c21black text-[11px] font-bold uppercase tracking-[0.5em] mb-3">Jairo Prieto · Century 21 Bonanza</p>
-        <p class="text-gray-400 text-[10px] uppercase tracking-[0.2em]">Pedro Ciancio casi Calle Amistad · Barrio Jara</p>
+    <footer class="bg-c21black py-16 text-white border-t-4 border-c21gold">
+        <div class="container mx-auto px-6 max-w-4xl flex flex-col md:flex-row items-center justify-between gap-10">
+            
+            <div class="flex items-center gap-6">
+                <img src="jairo.jpg" alt="Jairo Prieto" class="w-24 h-24 rounded-full border-2 border-c21gold object-cover shadow-lg bg-white">
+                <div class="text-left">
+                    <p class="text-xl font-bold uppercase tracking-widest text-c21gold">Jairo Prieto</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mt-1">Asesor Inmobiliario</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400">Century 21 Bonanza</p>
+                </div>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-4">Contacto Directo</p>
+                <div class="flex items-center justify-center md:justify-end gap-5">
+                    <a href="https://wa.me/595991712966" target="_blank" class="text-gray-300 hover:text-c21gold transition text-2xl" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://instagram.com/jairoprieto_c21bonanza" target="_blank" class="text-gray-300 hover:text-c21gold transition text-2xl" title="Instagram Bonanza">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://instagram.com/jairoprietocentury21" target="_blank" class="text-gray-300 hover:text-c21gold transition text-2xl" title="Instagram Century 21">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61578572123378" target="_blank" class="text-gray-300 hover:text-c21gold transition text-2xl" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+                <p class="text-[9px] text-gray-600 mt-6 uppercase tracking-[0.2em]">Pedro Ciancio casi Calle Amistad · Barrio Jara</p>
+            </div>
+            
+        </div>
     </footer>
 
 </body>

@@ -68,7 +68,7 @@
 </head>
 <body class="bg-white text-c21black antialiased">
 
-    <a href="https://wa.me/595994325713?text=Hola%20Jairo,%20quiero%20la%20ficha%20técnica%20de%20TownCenter" class="btn-float bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center active:scale-95 transition">
+    <a href="#contacto" class="btn-float bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center active:scale-95 transition">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
@@ -322,7 +322,7 @@
             <div class="text-center md:text-right">
                 <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-4">Contacto Directo</p>
                 <div class="flex items-center justify-center md:justify-end gap-5">
-                    <a href="https://wa.me/595994325713" target="_blank" class="text-gray-300 hover:text-c21gold transition text-2xl" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#contacto" class="text-gray-300 hover:text-c21gold transition text-2xl" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://instagram.com/jairoprieto_c21bonanza" target="_blank" class="text-gray-300 hover:text-c21gold transition text-2xl" title="Instagram Bonanza"><i class="fab fa-instagram"></i></a>
                     <a href="https://instagram.com/jairoprietocentury21" target="_blank" class="text-gray-300 hover:text-c21gold transition text-2xl" title="Instagram Century 21"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61578572123378" target="_blank" class="text-gray-300 hover:text-c21gold transition text-2xl" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -378,14 +378,12 @@
             if (e.target === this) closeModal();
         });
 
-        // BLOQUE DE ENVÍO INTEGRADO ULTRA-MINIMALISTA
         document.getElementById('leadForm').onsubmit = function(e) {
             e.preventDefault(); 
 
             const nombre = document.getElementById('nombre').value;
             const webhookUrl = 'https://n8n.jairokov.com/webhook/1c64a5fc-178e-4a5f-bb23-93909b21839d';
 
-            // ENVÍO FETCH (CAPTURA EL NOMBRE)
             fetch(webhookUrl, {
                 method: 'POST',
                 mode: 'no-cors',
@@ -395,11 +393,10 @@
                 body: JSON.stringify({
                     nombre: nombre,
                     proyecto: 'TownCenter Barrio Jara',
-                    origen: 'Landing Page Minimal'
+                    origen: 'Landing Page Captacion'
                 })
             });
 
-            // SALTO A WHATSAPP CON EL NOMBRE EN EL MENSAJE
             setTimeout(() => {
                 window.location.href = `https://wa.me/595994325713?text=Hola,%20soy%20${encodeURIComponent(nombre)}.%20Quiero%20la%20ficha%20de%20TownCenter.`;
             }, 400);

@@ -380,7 +380,7 @@
             if (e.target === this) closeModal();
         });
 
-        // ENVÍO INTEGRADO
+        // ENVÍO CORREGIDO CON REDIRECCIÓN A GRACIAS.HTML
         document.getElementById('leadForm').onsubmit = function(e) {
             e.preventDefault(); 
             const nombre = document.getElementById('nombre').value;
@@ -397,8 +397,9 @@
                 })
             });
 
+            // Cambiado para redirigir a la nueva página de gracias
             setTimeout(() => {
-                window.location.href = `https://wa.me/595994325713?text=Hola,%20soy%20${encodeURIComponent(nombre)}.%20Quiero%20la%20ficha%20de%20TownCenter.`;
+                window.location.href = `gracias.html?nombre=${encodeURIComponent(nombre)}`;
             }, 400);
         };
     </script>

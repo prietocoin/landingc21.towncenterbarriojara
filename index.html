@@ -62,6 +62,20 @@
             margin-bottom: 15px;
             font-size: 0.9rem;
         }
+
+        /* Lista de Contexto */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        .feature-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .feature-list li:last-child { border-bottom: none; }
         
         /* Desplegables y Botones */
         .form-select-fintech {
@@ -144,6 +158,11 @@
                             <span class="roi-badge" style="background-color: #fff3cd; color: #856404;">Max: 16% , 25%+</span>
                         </div>
                         
+                        <ul class="feature-list">
+                            <li><strong>Estrategia:</strong> Multiplicación de capital durante la fase de excavación.</li>
+                            <li><strong>Ventaja:</strong> Acceso al precio más bajo del ciclo de obra.</li>
+                        </ul>
+                        
                         <div class="mt-auto">
                             <label class="form-label small text-muted fw-bold">1. Proyecto:</label>
                             <select class="form-select form-select-sm form-select-fintech mb-2" id="c1-l1" onchange="controlarNivel1('c1', 'c1-btn')">
@@ -158,8 +177,8 @@
                                 <select class="form-select form-select-sm form-select-fintech mb-2" id="c1-l2" onchange="controlarNivel2('c1', 'c1-btn', 'towncenter')">
                                     <option value="">Seleccione...</option>
                                     <option value="Monoambiente">Monoambiente</option>
-                                    <option value="Tipo A">Departamento Tipo A</option>
-                                    <option value="Tipo B">Departamento Tipo B</option>
+                                    <option value="1 Habitacion A">1 Habitación A</option>
+                                    <option value="1 Habitacion B">1 Habitación B</option>
                                     <option value="otro">Otra Tipología</option>
                                 </select>
                             </div>
@@ -179,6 +198,11 @@
                         <div class="text-center">
                             <span class="roi-badge" style="background-color: #d1ecf1; color: #0c5460;">Max: 11% , 15%</span>
                         </div>
+
+                        <ul class="feature-list">
+                            <li><strong>Estrategia:</strong> Capturar el descuento final antes de la entrega.</li>
+                            <li><strong>Ventaja:</strong> Menor tiempo de espera para monetizar.</li>
+                        </ul>
                         
                         <div class="mt-auto">
                             <label class="form-label small text-muted fw-bold">1. Zona Preferida:</label>
@@ -214,6 +238,11 @@
                         <div class="text-center">
                             <span class="roi-badge" style="background-color: #d4edda; color: #155724;">Anual: 7% , 10,5%</span>
                         </div>
+
+                        <ul class="feature-list">
+                            <li><strong>Estrategia:</strong> Máximo flujo de caja mediante gestión hotelera.</li>
+                            <li><strong>Ventaja:</strong> Liquidez mensual en zonas de alta rotación.</li>
+                        </ul>
                         
                         <div class="mt-auto">
                             <label class="form-label small text-muted fw-bold">1. Ubicación Estratégica:</label>
@@ -249,6 +278,11 @@
                         <div class="text-center">
                             <span class="roi-badge" style="background-color: #e2e3e5; color: #383d41;">Anual: 4,5% , 6,5%</span>
                         </div>
+
+                        <ul class="feature-list">
+                            <li><strong>Estrategia:</strong> Renta fija garantizada a largo plazo.</li>
+                            <li><strong>Ventaja:</strong> Cero gestión operativa , máxima seguridad patrimonial.</li>
+                        </ul>
                         
                         <div class="mt-auto">
                             <label class="form-label small text-muted fw-bold">1. Tipo de Activo:</label>
@@ -309,7 +343,7 @@
                 div2.style.display = 'none';
                 activarBotonWpp(btn, "Hola Jairo , busco opciones relacionadas a: " + val1);
             } else if (val1 !== '') {
-                // Si eligen algo válido (ej: TownCenter , Eje Corporativo) mostramos el paso 2
+                // Si eligen algo válido mostramos el paso 2
                 div2.style.display = 'block';
                 document.getElementById(cardPrefix + '-l2').value = ""; // Limpia el nivel 2
             } else {
@@ -331,7 +365,7 @@
                     btn.innerText = 'Ver el Proyecto';
                     btn.href = "https://towncenterbarriojara.jairoprieto.com/towncenterbarriojara.html?tipologia=" + encodeURIComponent(val2);
                 } else {
-                    // Para todos los demás (incluyendo si seleccionan "otro" en el paso 2)
+                    // Para todos los demás
                     var mensaje = "Hola Jairo , me interesa la opción de " + val1 + " con la especificación: " + val2;
                     activarBotonWpp(btn, mensaje);
                 }

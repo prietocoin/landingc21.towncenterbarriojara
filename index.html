@@ -3,363 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análisis de Portafolio Asunción | Jairo Prieto InmobFintech</title>
+    <title>Jairo Prieto | Century 21 Bonanza Terminal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        :root {
+            --navy: #0a192f;
+            --gold: #c5a059;
+            --white: #ffffff;
+            --glass: rgba(15, 23, 42, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --slate: #8892b0;
+        }
+
         body { 
-            background-color: #f4f6f9; 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            color: #333;
-        }
-        /* Estilos Hero */
-        .hero-fintech { 
-            background: linear-gradient(135deg, #0a192f 0%, #020c1b 100%); 
-            color: #ffffff; 
-            padding: 80px 0; 
-            border-bottom: 4px solid #c5a059; 
-        }
-        .highlight { color: #c5a059; font-weight: 700; }
-        
-        /* Estilos Datos Macro */
-        .data-card { 
-            border-radius: 15px; 
-            border: none; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-            transition: 0.3s; 
-            background: #fff;
-        }
-        .data-card:hover { transform: translateY(-5px); }
-        
-        /* Estilos Tarjetas de Inversión */
-        .investment-card { 
-            background: #ffffff;
-            border-radius: 12px; 
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
-            transition: all 0.3s ease; 
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .investment-card:hover { 
-            transform: translateY(-8px); 
-            box-shadow: 0 12px 25px rgba(0,0,0,0.1); 
-            border-color: #c5a059;
-        }
-        .card-header-fintech {
-            background-color: #0a192f;
-            color: white;
-            padding: 15px;
-            border-radius: 12px 12px 0 0;
-            text-align: center;
-            border-bottom: 3px solid #c5a059;
-        }
-        .roi-badge {
-            font-weight: bold;
-            padding: 6px 10px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
+            background-color: #020617; 
+            background-image: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.9)),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover; background-attachment: fixed; background-position: center;
+            font-family: 'Inter', -apple-system, sans-serif; color: var(--white);
+            min-height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0;
         }
 
-        /* Lista de Contexto */
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-            font-size: 0.85rem;
-            color: #555;
-        }
-        .feature-list li {
-            padding: 5px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .feature-list li:last-child { border-bottom: none; }
-        
-        /* Desplegables y Botones */
-        .form-select-fintech {
-            border: 1px solid #c5a059;
-            color: #0a192f;
-            font-weight: 600;
-            border-radius: 6px;
-            font-size: 0.85rem;
-        }
-        .form-select-fintech:focus {
-            border-color: #0a192f;
-            box-shadow: none;
-        }
-        .btn-action { 
-            color: #fff; 
-            font-weight: 600; 
-            padding: 12px 20px; 
-            border-radius: 6px; 
-            width: 100%;
-            text-decoration: none; 
-            text-align: center;
-            transition: 0.2s;
-            border: none;
-            display: block;
-            margin-top: 15px;
-        }
-        .btn-action:hover { opacity: 0.9; color: white; }
-    </style>
-</head>
-<body>
-
-    <header class="hero-fintech text-center">
-        <div class="container">
-            <p class="text-uppercase mb-3" style="letter-spacing: 2px; color: #8892b0; font-size: 0.9rem;">
-                Terminal de Inversión Inmobiliaria | Asunción 2026
-            </p>
-            <h1 class="display-5 fw-bold mb-4">
-                Asignación Inteligente de Capital: <br>
-                <span class="highlight">Rendimientos Superiores al 4,8%</span>
-            </h1>
-            <p class="lead mb-5 mx-auto" style="max-width: 700px; color: #ccd6f6;">
-                El mercado paraguayo supera a la región. Configure su estrategia paso a paso , descubra las opciones ideales para su portafolio.
-            </p>
-        </div>
-    </header>
-
-    <section class="container my-5">
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <div class="card data-card p-4">
-                    <h3 style="color: #0a192f; font-weight: bold;">+175.000 m²</h3>
-                    <p class="text-muted mb-0">Construcción anual en el actual Ciclo de Expansión</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card data-card p-4">
-                    <h3 style="color: #0a192f; font-weight: bold;">USD 100bn</h3>
-                    <p class="text-muted mb-0">Activos totales en el sector inmobiliario paraguayo</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card data-card p-4">
-                    <h3 style="color: #0a192f; font-weight: bold;">Asunción Líder</h3>
-                    <p class="text-muted mb-0">Supera a Montevideo (2,6%) , Buenos Aires (3,1%)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container my-5 py-2">
-        <div class="row g-4">
-            
-            <div class="col-lg-3 col-md-6">
-                <div class="investment-card">
-                    <div class="card-header-fintech" style="border-bottom-color: #c5a059;">
-                        <h5 class="mb-0">Etapa Semilla</h5>
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                        <div class="text-center">
-                            <span class="roi-badge" style="background-color: #fff3cd; color: #856404;">Max: 16% , 25%+</span>
-                        </div>
-                        
-                        <ul class="feature-list">
-                            <li><strong>Estrategia:</strong> Multiplicación de capital durante la fase de excavación.</li>
-                            <li><strong>Ventaja:</strong> Acceso al precio más bajo del ciclo de obra.</li>
-                        </ul>
-                        
-                        <div class="mt-auto">
-                            <label class="form-label small text-muted fw-bold">1. Proyecto:</label>
-                            <select class="form-select form-select-sm form-select-fintech mb-2" id="c1-l1" onchange="controlarNivel1('c1', 'c1-btn')">
-                                <option value="">Seleccione...</option>
-                                <option value="towncenter">TownCenter Barrio Jara</option>
-                                <option value="mallorca">Edificio Mallorca</option>
-                                <option value="otro">Otro Proyecto</option>
-                            </select>
-
-                            <div id="c1-div2" style="display: none;">
-                                <label class="form-label small text-muted fw-bold mt-1">2. Tipología:</label>
-                                <select class="form-select form-select-sm form-select-fintech mb-2" id="c1-l2" onchange="controlarNivel2('c1', 'c1-btn', 'towncenter')">
-                                    <option value="">Seleccione...</option>
-                                    <option value="Monoambiente">Monoambiente</option>
-                                    <option value="1 Habitacion A">1 Habitación A</option>
-                                    <option value="1 Habitacion B">1 Habitación B</option>
-                                    <option value="otro">Otra Tipología</option>
-                                </select>
-                            </div>
-                            
-                            <a href="#" id="c1-btn" class="btn-action" style="background-color: #cccccc; pointer-events: none;">Completar Selección</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="investment-card">
-                    <div class="card-header-fintech" style="border-bottom-color: #17a2b8;">
-                        <h5 class="mb-0">Pozo Avanzado</h5>
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                        <div class="text-center">
-                            <span class="roi-badge" style="background-color: #d1ecf1; color: #0c5460;">Max: 11% , 15%</span>
-                        </div>
-                        <ul class="feature-list">
-                            <li><strong>Estrategia:</strong> Capturar el descuento final antes de la entrega.</li>
-                            <li><strong>Ventaja:</strong> Menor tiempo de espera para monetizar.</li>
-                        </ul>
-                        <div class="mt-auto">
-                            <label class="form-label small text-muted fw-bold">1. Zona Preferida:</label>
-                            <select class="form-select form-select-sm form-select-fintech mb-2" id="c2-l1" onchange="controlarNivel1('c2', 'c2-btn')">
-                                <option value="">Seleccione...</option>
-                                <option value="Eje Corporativo">Eje Corporativo</option>
-                                <option value="Las Mercedes">Las Mercedes</option>
-                                <option value="otro">Otra Zona</option>
-                            </select>
-                            <div id="c2-div2" style="display: none;">
-                                <label class="form-label small text-muted fw-bold mt-1">2. Ticket:</label>
-                                <select class="form-select form-select-sm form-select-fintech mb-2" id="c2-l2" onchange="controlarNivel2('c2', 'c2-btn', 'wpp')">
-                                    <option value="">Seleccione...</option>
-                                    <option value="USD 55.000 , 65.000">USD 55.000 , 65.000</option>
-                                    <option value="USD 65.000 , 85.000">USD 65.000 , 85.000</option>
-                                    <option value="otro">Otro</option>
-                                </select>
-                            </div>
-                            <a href="#" id="c2-btn" class="btn-action" style="background-color: #cccccc; pointer-events: none;">Completar Selección</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="investment-card">
-                    <div class="card-header-fintech" style="border-bottom-color: #28a745;">
-                        <h5 class="mb-0">Renta Temporal</h5>
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                        <div class="text-center">
-                            <span class="roi-badge" style="background-color: #d4edda; color: #155724;">Anual: 7% , 10,5%</span>
-                        </div>
-                        <ul class="feature-list">
-                            <li><strong>Estrategia:</strong> Máximo flujo de caja mediante gestión hotelera.</li>
-                            <li><strong>Ventaja:</strong> Liquidez mensual en zonas de alta rotación.</li>
-                        </ul>
-                        <div class="mt-auto">
-                            <label class="form-label small text-muted fw-bold">1. Ubicación:</label>
-                            <select class="form-select form-select-sm form-select-fintech mb-2" id="c3-l1" onchange="controlarNivel1('c3', 'c3-btn')">
-                                <option value="">Seleccione...</option>
-                                <option value="Zonas Premium">Zonas Premium</option>
-                                <option value="Centros Financieros">Centros Financieros</option>
-                                <option value="otro">Otra Ubicación</option>
-                            </select>
-                            <div id="c3-div2" style="display: none;">
-                                <label class="form-label small text-muted fw-bold mt-1">2. Unidad:</label>
-                                <select class="form-select form-select-sm form-select-fintech mb-2" id="c3-l2" onchange="controlarNivel2('c3', 'c3-btn', 'wpp')">
-                                    <option value="">Seleccione...</option>
-                                    <option value="Monoambiente Amoblado">Monoambiente</option>
-                                    <option value="1 Habitación">1 Habitación</option>
-                                    <option value="otro">Otro</option>
-                                </select>
-                            </div>
-                            <a href="#" id="c3-btn" class="btn-action" style="background-color: #cccccc; pointer-events: none;">Completar Selección</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="investment-card">
-                    <div class="card-header-fintech" style="border-bottom-color: #6c757d;">
-                        <h5 class="mb-0">Renta Tradicional</h5>
-                    </div>
-                    <div class="card-body d-flex flex-column p-4">
-                        <div class="text-center">
-                            <span class="roi-badge" style="background-color: #e2e3e5; color: #383d41;">Anual: 4,5% , 6,5%</span>
-                        </div>
-                        <ul class="feature-list">
-                            <li><strong>Estrategia:</strong> Renta fija garantizada a largo plazo.</li>
-                            <li><strong>Ventaja:</strong> Cero gestión operativa , seguridad patrimonial.</li>
-                        </ul>
-                        <div class="mt-auto">
-                            <label class="form-label small text-muted fw-bold">1. Activo:</label>
-                            <select class="form-select form-select-sm form-select-fintech mb-2" id="c4-l1" onchange="controlarNivel1('c4', 'c4-btn')">
-                                <option value="">Seleccione...</option>
-                                <option value="Residencial">Residencial</option>
-                                <option value="Comercial">Comercial</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                            <div id="c4-div2" style="display: none;">
-                                <label class="form-label small text-muted fw-bold mt-1">2. Capital:</label>
-                                <select class="form-select form-select-sm form-select-fintech mb-2" id="c4-l2" onchange="controlarNivel2('c4', 'c4-btn', 'wpp')">
-                                    <option value="">Seleccione...</option>
-                                    <option value="USD 90.000 , 150.000">USD 90.000 , 150.000</option>
-                                    <option value="USD 150.000+">USD 150.000+</option>
-                                    <option value="otro">Otro</option>
-                                </select>
-                            </div>
-                            <a href="#" id="c4-btn" class="btn-action" style="background-color: #cccccc; pointer-events: none;">Completar Selección</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="py-4 mt-5 text-center" style="background-color: #e9ecef;">
-        <div class="container">
-            <p class="text-muted fw-bold mb-1">Jairo Prieto | Asesor InmobFintech</p>
-            <p class="text-muted small mb-0">Century 21 Bonanza</p>
-        </div>
-    </footer>
-
-    <script>
-        const wppBaseUrl = "https://wa.me/595991712966?text=";
-
-        function controlarNivel1(cardPrefix, btnId) {
-            var val1 = document.getElementById(cardPrefix + '-l1').value;
-            var div2 = document.getElementById(cardPrefix + '-div2');
-            var btn = document.getElementById(btnId);
-            
-            btn.style.backgroundColor = '#cccccc';
-            btn.style.pointerEvents = 'none';
-            btn.innerText = 'Completar Selección';
-            btn.href = '#';
-
-            if (val1 === 'otro' || val1 === 'mallorca') {
-                div2.style.display = 'none';
-                activarBotonWpp(btn, "Hola Jairo , busco opciones relacionadas a: " + val1);
-            } else if (val1 !== '') {
-                div2.style.display = 'block';
-                document.getElementById(cardPrefix + '-l2').value = "";
-            } else {
-                div2.style.display = 'none';
-            }
+        .glass-terminal {
+            background: var(--glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border); border-radius: 24px;
+            padding: 50px 40px; max-width: 850px; width: 95%;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6); margin: 20px;
         }
 
-        function controlarNivel2(cardPrefix, btnId, modo) {
-            var val1 = document.getElementById(cardPrefix + '-l1').value;
-            var val2 = document.getElementById(cardPrefix + '-l2').value;
-            var btn = document.getElementById(btnId);
-
-            if (val2 !== "") {
-                if (modo === 'towncenter' && val2 !== 'otro') {
-                    btn.style.backgroundColor = '#c5a059'; 
-                    btn.style.pointerEvents = 'auto'; 
-                    btn.innerText = 'Ver el Proyecto';
-                    // ENDPOINT CORREGIDO: APUNTA A LA RAÍZ LIMPIA
-                    btn.href = "https://towncenterbarriojara.jairoprieto.com/?tipologia=" + encodeURIComponent(val2);
-                } else {
-                    var mensaje = "Hola Jairo , me interesa " + val1 + " con " + val2;
-                    activarBotonWpp(btn, mensaje);
-                }
-            } else {
-                btn.style.backgroundColor = '#cccccc';
-                btn.style.pointerEvents = 'none';
-                btn.innerText = 'Completar Selección';
-            }
+        .brand-header { 
+            font-size: 0.85rem; letter-spacing: 5px; color: var(--gold); 
+            text-transform: uppercase; margin-bottom: 30px; font-weight: 800; 
+            text-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
         }
 
-        function activarBotonWpp(btn, texto) {
-            btn.style.backgroundColor = '#c5a059';
-            btn.style.pointerEvents = 'auto';
-            btn.innerText = 'Ver el Proyecto';
-            btn.href = wppBaseUrl + encodeURIComponent(texto);
+        h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 30px; line-height: 1.1; letter-spacing: -1px; }
+        .highlight { color: var(--gold); }
+
+        /* Contenedor de pasos */
+        .step-container { display: none; text-align: left; animation: fadeIn 0.4s ease; }
+        .step-container.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .question-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 25px; color: var(--white); border-left: 4px solid var(--gold); padding-left: 15px; }
+
+        /* Opciones */
+        .option-card {
+            background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
+            border-radius: 12px; padding: 18px; margin-bottom: 12px; cursor: pointer;
+            transition: 0.3s; display: flex; align-items: center;
         }
-    </script>
-</body>
-</html>
+        .option-card:hover { border-color: var(--gold); background: rgba(197, 160, 89, 0.1); transform: translateX(5px); }
+        .option-card b { color: var(--gold); display: block; margin-bottom: 2px; font-size: 1rem; text-transform: uppercase; }
+        .option-card span { font-size: 0.85rem; color: var(--slate); font-weight: 500; }
+
+        .btn-action {
+            background: linear-gradient(135deg, var(--gold

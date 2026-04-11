@@ -59,4 +59,156 @@
         .option-card span { font-size: 0.85rem; color: var(--slate); font-weight: 500; }
 
         .btn-action {
-            background: linear-gradient(135deg, var(--gold
+            background: linear-gradient(135deg, var(--gold) 0%, #9c7e46 100%);
+            color: #000; border: none; padding: 20px 45px; font-weight: 900;
+            border-radius: 6px; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;
+            box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4); margin-top: 10px; transition: 0.3s;
+        }
+        .btn-action:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(197, 160, 89, 0.6); }
+
+        /* Módulos de la landing */
+        .investment-modules { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 40px; padding: 25px 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); }
+        .module-item b { display: block; font-size: 0.85rem; color: var(--gold); text-transform: uppercase; }
+        .module-item span { font-size: 0.65rem; color: var(--slate); font-weight: 600; }
+
+        /* Arreglo del ticket para evitar salto de línea feo */
+        .no-wrap { white-space: nowrap; }
+
+        .terminal-footer { margin-top: 40px; display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.3); font-weight: 600; }
+
+        @media (max-width: 768px) { 
+            h1 { font-size: 1.8rem; } 
+            .investment-modules { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .glass-terminal { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-terminal text-center">
+        <div id="intro-view">
+            <div class="brand-header">CENTURY 21 BONANZA // Jairo Prieto</div>
+            <h1>Ingeniería de <span class="highlight">Plusvalía</span> en Asunción</h1>
+            
+            <div class="investment-modules">
+                <div class="module-item"><b>Plusvalía</b><span>Pre-Pozo</span></div>
+                <div class="module-item"><b>Consolidación</b><span>Pozo Avanzado</span></div>
+                <div class="module-item"><b>Escala</b><span>Int. Compuesto</span></div>
+                <div class="module-item"><b>Renta</b><span>Flujo Soporte</span></div>
+            </div>
+
+            <p class="mb-5 mx-auto lead" style="color: #ccd6f6; max-width: 600px;">
+                Acceda a activos urbanos de alta rentabilidad con tickets desde <span class="no-wrap text-white fw-bold">USD 50.000 , 00</span>.
+            </p>
+
+            <button class="btn-action" onclick="startProfiler()">Configurar Inversión</button>
+        </div>
+
+        <div id="step-1" class="step-container">
+            <div class="question-title">¿Cuál es el objetivo principal del capital?</div>
+            <div class="option-card" onclick="saveData('objetivo', 'Arbitraje de Salida Rápida', 2)">
+                <div><b>Arbitraje (Salida Rápida)</b><span>Reventa en obra avanzada (ciclo < 12 meses).</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('objetivo', 'Plusvalía Máxima', 2)">
+                <div><b>Plusvalía Máxima</b><span>Captura desde Lista Cero (Fase Semilla).</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('objetivo', 'Flujo y Escala', 2)">
+                <div><b>Renta y Escala</b><span>Generación de activos para interés compuesto.</span></div>
+            </div>
+        </div>
+
+        <div id="step-2" class="step-container">
+            <div class="question-title">Seleccione su rango de asignación previsto:</div>
+            <div class="option-card" onclick="saveData('rango', 'USD 50k - 100k', 3)">
+                <div><b>USD 50.000 , 00 — 100.000 , 00</b><span>Unidades eficaces de 1 Habitación.</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('rango', 'USD 100k - 150k', 3)">
+                <div><b>USD 100.000 , 00 — 150.000 , 00</b><span>Unidades Premium o múltiples núcleos.</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('rango', 'Superior a 150k', 3)">
+                <div><b>Superior a USD 150.000 , 00</b><span>Estructuración de Portafolio Multi-activo.</span></div>
+            </div>
+        </div>
+
+        <div id="step-3" class="step-container">
+            <div class="question-title">Seleccione el cuadrante de posicionamiento:</div>
+            <div class="option-card" onclick="saveData('zona', 'Núcleo Corporativo', 4)">
+                <div><b>El Núcleo</b><span>Las Lomas, Carmelitas, Manorá e Ycua Sati.</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('zona', 'Derrame Norte (Crecimiento)', 4)">
+                <div><b>Derrame Norte</b><span>Barrio Jara, Mburucuyá, Virgen del Huerto y cercanos.</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('zona', 'Derrame Sur (Consolidación)', 4)">
+                <div><b>Derrame Sur</b><span>Villa Morra, Recoleta, Mcal. Estigarribia y cercanos.</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('zona', 'Derrame Este (Expansión)', 4)">
+                <div><b>Derrame Este</b><span>Santa Teresa, Curda, Isla Bogado y cercanos.</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('zona', 'Análisis Basado en ROI', 4)">
+                <div><b>Análisis Multi-Zona</b><span>Priorizar el rendimiento (ROI) sobre el cuadrante.</span></div>
+            </div>
+        </div>
+
+        <div id="step-4" class="step-container">
+            <div class="question-title">¿En qué tiempo prevé ejecutar la inyección?</div>
+            <div class="option-card" onclick="saveData('timing', 'Inmediato (0-30 días)', 5)">
+                <div><b>Ejecución Inmediata</b><span>Capital listo para reserva y entrega inicial.</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('timing', 'Próximos 90 días', 5)">
+                <div><b>Planificación Corto Plazo</b><span>Evaluando opciones para cierre trimestral.</span></div>
+            </div>
+            <div class="option-card" onclick="saveData('timing', 'Solo Información', 5)">
+                <div><b>Fase de Análisis</b><span>Consultando viabilidad y proyecciones.</span></div>
+            </div>
+        </div>
+
+        <div id="step-5" class="step-container text-center">
+            <div class="question-title text-center">Configuración Finalizada</div>
+            <p style="color: #8892b0; margin-bottom: 30px; font-size: 1.1rem;">La terminal ha procesado su perfil estratégico.</p>
+            <button class="btn-action" onclick="sendWhatsApp()">RECIBIR ESTRATEGIA POR WHATSAPP</button>
+        </div>
+
+        <div class="terminal-footer">
+            <div>CENTURY 21 BONANZA // 2026</div>
+            <div class="d-none d-md-block">STATUS: MERCADO ALPHA // LIQUIDEZ ALTA</div>
+        </div>
+    </div>
+
+    <script>
+        let leadData = { objetivo: '', rango: '', zona: '', timing: '' };
+
+        function startProfiler() {
+            document.getElementById('intro-view').style.display = 'none';
+            document.getElementById('step-1').classList.add('active');
+        }
+
+        function saveData(key, value, nextStep) {
+            leadData[key] = value;
+            document.querySelectorAll('.step-container').forEach(s => s.classList.remove('active'));
+            document.getElementById('step-' + nextStep).classList.add('active');
+        }
+
+        async function sendWhatsApp() {
+            // URL opcional para tu Webhook de n8n
+            const webhookURL = "TU_WEBHOOK_AQUÍ";
+
+            try {
+                fetch(webhookURL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(leadData)
+                });
+            } catch (e) {}
+
+            const phone = "595991712966";
+            const text = `Hola Jairo, configuré mi perfil Alpha en la terminal Century 21 Bonanza:\n\n` +
+                         `🎯 Objetivo: ${leadData.objetivo}\n` +
+                         `💰 Rango: ${leadData.rango}\n` +
+                         `📍 Cuadrante: ${leadData.zona}\n` +
+                         `⏳ Timing: ${leadData.timing}\n\n` +
+                         `Deseo recibir la hoja de ruta estratégica.`;
+            window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+        }
+    </script>
+</body>
+</html>

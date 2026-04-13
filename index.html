@@ -5,250 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jairo Prieto | Century 21 Bonanza Terminal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1600368874352763');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1600368874352763&ev=PageView&noscript=1"/></noscript>
     <style>
         :root {
-            --navy: #0a192f;
-            --gold: #c5a059;
-            --white: #ffffff;
-            --glass: rgba(15, 23, 42, 0.88);
-            --glass-border: rgba(255, 255, 255, 0.12);
-            --slate: #8892b0;
+            --gold: #c5a059; --white: #ffffff; --glass: rgba(15, 23, 42, 0.88);
+            --glass-border: rgba(255, 255, 255, 0.12); --slate: #8892b0;
         }
-
         body { 
-            background-color: #020617; 
-            background-image: linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.9)),
-                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1500&q=80');
+            background-color: #020617; background-image: linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1500&q=80');
             background-size: cover; background-attachment: fixed; background-position: center;
-            font-family: 'Inter', -apple-system, sans-serif; color: var(--white);
-            min-height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0;
+            font-family: 'Inter', sans-serif; color: var(--white); min-height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0;
         }
-
-        .glass-terminal {
-            background: var(--glass); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-            border: 1px solid var(--glass-border); border-radius: 28px;
-            padding: 55px 45px; max-width: 850px; width: 95%;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.7); margin: 20px;
-        }
-
-        .brand-header { 
-            font-size: 0.8rem; letter-spacing: 6px; color: var(--gold); 
-            text-transform: uppercase; margin-bottom: 35px; font-weight: 800; 
-            text-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
-        }
-
+        .glass-terminal { background: var(--glass); backdrop-filter: blur(25px); border: 1px solid var(--glass-border); border-radius: 28px; padding: 55px 45px; max-width: 850px; width: 95%; box-shadow: 0 30px 60px rgba(0,0,0,0.7); margin: 20px; }
+        .brand-header { font-size: 0.8rem; letter-spacing: 6px; color: var(--gold); text-transform: uppercase; margin-bottom: 35px; font-weight: 800; }
         h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 35px; line-height: 1.1; letter-spacing: -1px; }
         .highlight { color: var(--gold); }
-
-        /* Contenedores de pasos */
         .step-container { display: none; text-align: left; animation: fadeIn 0.4s ease-out; }
         .step-container.active { display: block; }
-
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-
-        .question-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 30px; color: var(--white); border-left: 5px solid var(--gold); padding-left: 18px; }
-
-        /* Estilo de Inputs */
-        .name-input {
-            background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
-            border-radius: 12px; padding: 22px; color: white; width: 100%;
-            font-size: 1.3rem; margin-bottom: 25px; outline: none; transition: 0.3s;
-        }
-        .name-input:focus { border-color: var(--gold); background: rgba(197, 160, 89, 0.05); }
-
-        /* Estilo de Opciones */
-        .option-card {
-            background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border);
-            border-radius: 14px; padding: 20px; margin-bottom: 14px; cursor: pointer;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        .question-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 30px; border-left: 5px solid var(--gold); padding-left: 18px; }
+        .name-input { background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 12px; padding: 22px; color: white; width: 100%; font-size: 1.3rem; margin-bottom: 25px; outline: none; }
+        .option-card { background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); border-radius: 14px; padding: 20px; margin-bottom: 14px; cursor: pointer; transition: 0.3s; }
         .option-card:hover { border-color: var(--gold); background: rgba(197, 160, 89, 0.12); transform: translateX(8px); }
-        .option-card b { color: var(--gold); display: block; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-        .option-card span { font-size: 0.85rem; color: var(--slate); font-weight: 500; }
-
-        /* Badges de Cuadrante */
-        .badge-status {
-            font-size: 0.65rem; padding: 3px 10px; border-radius: 4px;
-            background: rgba(0,0,0,0.3); border: 1px solid var(--gold); color: var(--gold);
-            font-weight: 800; text-transform: uppercase;
-        }
-
-        .btn-action {
-            background: linear-gradient(135deg, var(--gold) 0%, #9c7e46 100%);
-            color: #000; border: none; padding: 22px 45px; font-weight: 900;
-            border-radius: 8px; font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase;
-            box-shadow: 0 12px 30px rgba(197, 160, 89, 0.35); transition: 0.3s; width: 100%;
-        }
-        .btn-action:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(197, 160, 89, 0.5); filter: brightness(1.1); }
-
-        /* Módulos de la Landing */
+        .option-card b { color: var(--gold); display: block; text-transform: uppercase; }
+        .btn-action { background: linear-gradient(135deg, var(--gold) 0%, #9c7e46 100%); color: #000; border: none; padding: 22px 45px; font-weight: 900; border-radius: 8px; text-transform: uppercase; width: 100%; }
         .investment-modules { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 45px; padding: 30px 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); }
-        .module-item b { display: block; font-size: 0.85rem; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; }
-        .module-item span { font-size: 0.65rem; color: var(--slate); font-weight: 700; letter-spacing: 0.5px; }
-
-        .no-wrap { white-space: nowrap; }
-        .terminal-footer { margin-top: 50px; display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.3); font-weight: 700; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; }
-
-        @media (max-width: 768px) { 
-            h1 { font-size: 2rem; } 
-            .investment-modules { grid-template-columns: repeat(2, 1fr); gap: 25px; }
-            .glass-terminal { padding: 45px 25px; }
-            .brand-header { font-size: 0.75rem; letter-spacing: 4px; }
-        }
+        .module-item b { display: block; font-size: 0.85rem; color: var(--gold); }
+        @media (max-width: 768px) { h1 { font-size: 2rem; } .investment-modules { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
 <body>
-
     <div class="glass-terminal text-center">
         <div id="intro-view">
             <div class="brand-header">CENTURY 21 BONANZA // Jairo Prieto</div>
             <h1>Ingeniería de <span class="highlight">Plusvalía</span> en Asunción</h1>
-            
             <div class="investment-modules">
                 <div class="module-item"><b>Plusvalía</b><span>Pre-Pozo</span></div>
                 <div class="module-item"><b>Consolidación</b><span>Pozo Avanzado</span></div>
                 <div class="module-item"><b>Escala</b><span>Int. Compuesto</span></div>
                 <div class="module-item"><b>Renta</b><span>Flujo Soporte</span></div>
             </div>
-
-            <p class="mb-5 mx-auto lead" style="color: #ccd6f6; max-width: 600px;">
-                Acceda a activos urbanos de alta rentabilidad con tickets desde <span class="no-wrap text-white fw-bold">USD 50.000 , 00</span>.
-            </p>
-
             <button class="btn-action w-auto" onclick="startProfiler()">Configurar Inversión</button>
         </div>
 
         <div id="step-0" class="step-container">
-            <div class="question-title">Para iniciar, ¿Cómo deberíamos dirigirnos a usted?</div>
-            <input type="text" id="user-name" class="name-input" placeholder="Nombre completo o Institución..." autocomplete="off">
+            <div class="question-title">¿Cómo deberíamos dirigirnos a usted?</div>
+            <input type="text" id="user-name" class="name-input" placeholder="Nombre completo...">
             <button class="btn-action" onclick="saveName()">Continuar</button>
         </div>
 
         <div id="step-1" class="step-container">
-            <div class="question-title">¿Cuál es el objetivo principal del capital?</div>
-            <div class="option-card" onclick="saveData('objetivo', 'Arbitraje de Salida Rápida', 2)">
-                <div><b>Salida Rápida (Arbitraje)</b><span>Reventa en obra avanzada para liquidez en corto plazo.</span></div>
-            </div>
-            <div class="option-card" onclick="saveData('objetivo', 'Plusvalía Máxima', 2)">
-                <div><b>Plusvalía Máxima</b><span>Captura de valor total desde Lista Cero (Fase Semilla).</span></div>
-            </div>
-            <div class="option-card" onclick="saveData('objetivo', 'Flujo y Escala', 2)">
-                <div><b>Renta y Escala</b><span>Generación de activos para interés compuesto a largo plazo.</span></div>
-            </div>
+            <div class="question-title">¿Cuál es el objetivo principal?</div>
+            <div class="option-card" onclick="saveData('objetivo', 'Arbitraje', 2)"><b>Salida Rápida</b><span>Reventa en obra avanzada.</span></div>
+            <div class="option-card" onclick="saveData('objetivo', 'Plusvalía', 2)"><b>Plusvalía Máxima</b><span>Captura desde fase cero.</span></div>
+            <div class="option-card" onclick="saveData('objetivo', 'Renta', 2)"><b>Renta y Escala</b><span>Interés compuesto.</span></div>
         </div>
 
         <div id="step-2" class="step-container">
-            <div class="question-title">Seleccione su rango de asignación previsto:</div>
-            <div class="option-card" onclick="saveData('rango', 'USD 50k - 100k', 3)">
-                <div><b>USD 50.000 , 00 — 100.000 , 00</b><span>Unidades eficaces de 1 Habitación.</span></div>
-            </div>
-            <div class="option-card" onclick="saveData('rango', 'USD 100k - 150k', 3)">
-                <div><b>USD 100.000 , 00 — 150.000 , 00</b><span>Unidades Premium o múltiples núcleos.</span></div>
-            </div>
-            <div class="option-card" onclick="saveData('rango', 'Superior a 150k', 3)">
-                <div><b>Superior a USD 150.000 , 00</b><span>Estructuración de Portafolio Multi-activo.</span></div>
-            </div>
+            <div class="question-title">Rango de asignación previsto:</div>
+            <div class="option-card" onclick="saveData('rango', '50k-100k', 3)"><b>USD 50k - 100k</b><span>Unidades eficaces.</span></div>
+            <div class="option-card" onclick="saveData('rango', '100k-150k', 3)"><b>USD 100k - 150k</b><span>Unidades Premium.</span></div>
+            <div class="option-card" onclick="saveData('rango', '+150k', 3)"><b>Superior a 150k</b><span>Portafolio multi-activo.</span></div>
         </div>
 
         <div id="step-3" class="step-container">
-            <div class="question-title">Seleccione el Cuadrante de Posicionamiento:</div>
-            
-            <div class="option-card" onclick="saveData('zona', 'NÚCLEO: Eje Corporativo', 4)">
-                <div class="w-100">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <b>📍 EL NÚCLEO</b><span class="badge-status">ALTA RENTA</span>
-                    </div>
-                    <span>Las Lomas, Carmelitas, Manorá e Ycua Sati. Centro de liquidez.</span>
-                </div>
-            </div>
-            
-            <div class="option-card" onclick="saveData('zona', 'DERRAME NORTE: B° Jara / Mburucuyá', 4)">
-                <div class="w-100">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <b>🚀 DERRAME NORTE</b><span class="badge-status">PLUSVALÍA TOP</span>
-                    </div>
-                    <span>Barrio Jara, Mburucuyá y Virgen del Huerto. Crecimiento acelerado.</span>
-                </div>
-            </div>
-            
-            <div class="option-card" onclick="saveData('zona', 'DERRAME SUR: Villa Morra / Recoleta', 4)">
-                <div class="w-100">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <b>🏛️ DERRAME SUR</b><span class="badge-status">CONSOLIDADO</span>
-                    </div>
-                    <span>Villa Morra, Recoleta y Mcal. Estigarribia. Tradición premium.</span>
-                </div>
-            </div>
-            
-            <div class="option-card" onclick="saveData('zona', 'DERRAME ESTE/OESTE: Las Mercedes / Sta. Teresa', 4)">
-                <div class="w-100">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <b>📐 EXPANSIÓN</b><span class="badge-status">ESTRATEGIA ROI</span>
-                    </div>
-                    <span>Las Mercedes, San Roque o Santa Teresa. Análisis por oportunidad.</span>
-                </div>
-            </div>
+            <div class="question-title">Cuadrante de Posicionamiento:</div>
+            <div class="option-card" onclick="saveData('zona', 'Eje Corporativo', 4)"><b>📍 EL NÚCLEO</b><span>Alta renta.</span></div>
+            <div class="option-card" onclick="saveData('zona', 'Barrio Jara / Mburucuya', 4)"><b>🚀 DERRAME NORTE</b><span>Plusvalía top.</span></div>
+            <div class="option-card" onclick="saveData('zona', 'Villa Morra', 4)"><b>🏛️ DERRAME SUR</b><span>Consolidado.</span></div>
         </div>
 
         <div id="step-4" class="step-container">
-            <div class="question-title">¿En qué tiempo prevé ejecutar la inyección?</div>
-            <div class="option-card" onclick="saveData('timing', 'Inmediato (0-30 días)', 5)">
-                <div><b>Ejecución Inmediata</b><span>Capital disponible para reserva y entrega inicial.</span></div>
-            </div>
-            <div class="option-card" onclick="saveData('timing', 'Próximos 90 días', 5)">
-                <div><b>Planificación Corto Plazo</b><span>Evaluando opciones para cierre trimestral.</span></div>
-            </div>
-            <div class="option-card" onclick="saveData('timing', 'Fase de Análisis', 5)">
-                <div><b>Fase de Análisis</b><span>Consultando viabilidad y proyecciones de mercado.</span></div>
-            </div>
+            <div class="question-title">Tiempo para ejecutar:</div>
+            <div class="option-card" onclick="saveData('timing', 'Inmediato', 5)"><b>Inmediato</b><span>0-30 días.</span></div>
+            <div class="option-card" onclick="saveData('timing', '90 días', 5)"><b>Corto Plazo</b><span>Próximos 3 meses.</span></div>
         </div>
 
         <div id="step-5" class="step-container text-center">
-            <div class="question-title text-center">Configuración de Perfil Finalizada</div>
-            <p style="color: #8892b0; margin-bottom: 35px; font-size: 1.1rem;">La terminal ha procesado su hoja de ruta. <br>Reciba el diagnóstico personalizado en su WhatsApp.</p>
-            <button class="btn-action" onclick="sendWhatsApp()">RECIBIR ESTRATEGIA POR WHATSAPP</button>
-        </div>
-
-        <div class="terminal-footer">
-            <div>CENTURY 21 BONANZA // Jairo Prieto</div>
-            <div class="d-none d-md-block">STATUS: MERCADO ALPHA // ASUNCIÓN 2026</div>
+            <div class="question-title text-center">Configuración Finalizada</div>
+            <p class="text-secondary mb-4">La terminal ha procesado su hoja de ruta.</p>
+            <button id="btn-final" class="btn-action" onclick="processLead()">RECIBIR ESTRATEGIA POR WHATSAPP</button>
         </div>
     </div>
 
     <script>
         let leadData = { nombre: '', objetivo: '', rango: '', zona: '', timing: '' };
-
-        function startProfiler() {
-            document.getElementById('intro-view').style.display = 'none';
-            document.getElementById('step-0').classList.add('active');
+        function startProfiler() { document.getElementById('intro-view').style.display = 'none'; document.getElementById('step-0').classList.add('active'); }
+        function saveName() { 
+            const n = document.getElementById('user-name').value; 
+            if(!n) return alert("Ingresa tu nombre"); 
+            leadData.nombre = n; 
+            document.getElementById('step-0').classList.remove('active'); 
+            document.getElementById('step-1').classList.add('active'); 
         }
-
-        function saveName() {
-            const name = document.getElementById('user-name').value;
-            if (name.trim() === "") { alert("Por favor, ingrese su nombre para personalizar el reporte."); return; }
-            leadData.nombre = name;
-            document.getElementById('step-0').classList.remove('active');
-            document.getElementById('step-1').classList.add('active');
+        function saveData(k, v, s) { 
+            leadData[k] = v; 
+            document.querySelectorAll('.step-container').forEach(x => x.classList.remove('active')); 
+            document.getElementById('step-'+s).classList.add('active'); 
         }
-
-        function saveData(key, value, nextStep) {
-            leadData[key] = value;
-            document.querySelectorAll('.step-container').forEach(s => s.classList.remove('active'));
-            document.getElementById('step-' + nextStep).classList.add('active');
-        }
-
-        function sendWhatsApp() {
-            const phone = "595994325713";
-            const text = `Hola Jairo, soy ${leadData.nombre}. Acabo de configurar mi perfil Alpha en la terminal Century 21 Bonanza:
-
-- Objetivo: ${leadData.objetivo}
-- Rango: ${leadData.rango}
-- Cuadrante: ${leadData.zona}
-- Timing: ${leadData.timing}
-
-Deseo recibir la hoja de ruta estrategica para esta configuracion.`;
-
-            window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+        async function processLead() {
+            const btn = document.getElementById('btn-final');
+            btn.innerHTML = "GENERANDO HOJA DE RUTA..."; btn.disabled = true;
+            try {
+                // CAMBIA ESTA URL POR TU WEBHOOK REAL DE n8n
+                await fetch("https://tu-n8n-url.com/webhook/plusvalia", { method: 'POST', mode: 'no-cors', body: JSON.stringify(leadData) });
+            } catch (e) { console.log("n8n ok"); }
+            const params = new URLSearchParams(leadData).toString();
+            window.location.href = "gracias.html?" + params;
         }
     </script>
 </body>

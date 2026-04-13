@@ -20,6 +20,7 @@
         .option-card { background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); border-radius: 12px; padding: 15px; margin-bottom: 10px; cursor: pointer; transition: 0.2s; border: 1px solid transparent; }
         .option-card:hover { border-color: var(--gold); background: rgba(197, 160, 89, 0.1); }
         .btn-action { background: var(--gold); color: #000; border: none; padding: 18px; font-weight: 900; border-radius: 8px; text-transform: uppercase; width: 100%; letter-spacing: 1px; }
+        .terminal-footer { margin-top: 40px; display: flex; justify-content: space-between; font-size: 0.65rem; color: rgba(255,255,255,0.3); font-weight: 700; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; text-transform: uppercase; }
     </style>
 </head>
 <body>
@@ -61,8 +62,13 @@
         </div>
 
         <div id="step-5" class="step-container text-center">
-            <div class="question-title text-center">Perfil Analizado</div>
-            <button id="btn-final" class="btn-action" onclick="goToThanks()">VER ESTRATEGIA FINAL</button>
+            <div class="question-title text-center">Configuración Finalizada</div>
+            <button id="btn-final" class="btn-action" onclick="goToThanks()">RECIBIR ESTRATEGIA</button>
+        </div>
+
+        <div class="terminal-footer">
+            <div>CENTURY 21 BONANZA // Jairo Prieto</div>
+            <div>STATUS: MERCADO ALPHA // ASUNCIÓN 2026</div>
         </div>
     </div>
 
@@ -83,7 +89,10 @@
         }
 
         function goToThanks() {
-            // REDIRECCIÓN DIRECTA A GRACIAS PASANDO LOS DATOS EN LA URL
+            const btn = document.getElementById('btn-final');
+            btn.innerHTML = "GENERANDO..."; btn.disabled = true;
+            
+            // REDIRECCIÓN INTERNA A TU ARCHIVO gracias.html
             const params = new URLSearchParams(leadData).toString();
             window.location.href = "gracias.html?" + params;
         }

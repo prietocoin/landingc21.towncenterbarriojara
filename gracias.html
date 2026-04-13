@@ -16,7 +16,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1600368874352763');
     fbq('track', 'PageView');
-    fbq('track', 'Lead'); // TRACKEO DE LEAD EXITOSO
+    fbq('track', 'Lead'); 
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1600368874352763&ev=PageView&noscript=1"/></noscript>
     
@@ -33,34 +33,37 @@
         <i class="fas fa-check-circle text-7xl md:text-8xl"></i>
     </div>
 
-    <h1 class="text-4xl md:text-5xl font-black uppercase mb-4 tracking-tighter">¡Perfil Validado!</h1>
-    <p class="text-gray-500 text-sm tracking-widest uppercase mb-10 max-w-sm mx-auto">Haz clic para recibir tu diagnóstico y hoja de ruta estratégica por WhatsApp.</p>
+    <h1 class="text-4xl md:text-5xl font-black uppercase mb-4 tracking-tighter leading-none">¡Perfil Validado!</h1>
+    <p class="text-gray-500 text-sm tracking-widest uppercase mb-10 max-w-sm mx-auto">Tus datos han sido registrados. Haz clic abajo para recibir tu diagnóstico en WhatsApp.</p>
     
     <a id="btnWhatsapp" href="#" class="bg-black text-[#c4a47c] px-10 py-5 text-xs font-bold tracking-[0.3em] uppercase hover:bg-[#c4a47c] hover:text-white transition-all shadow-2xl flex items-center gap-4 rounded-sm scale-110 active:scale-95">
         <i class="fab fa-whatsapp text-xl"></i>
-        Abrir Consultoría Ahora
+        Abrir WhatsApp Ahora
     </a>
 
     <div class="mt-20 flex flex-col items-center opacity-40">
-        <span class="text-lg font-bold tracking-tighter uppercase">Century 21</span>
+        <span class="text-lg font-bold tracking-tighter uppercase leading-none">Century 21</span>
         <span class="text-[9px] font-light tracking-[0.2em] uppercase">Bonanza // Jairo Prieto</span>
     </div>
 
     <script>
+        // RECUPERAMOS LOS DATOS QUE EL INDEX PASÓ POR LA URL
         const urlParams = new URLSearchParams(window.location.search);
-        const n = urlParams.get('nombre') || 'Inversor';
-        const o = urlParams.get('objetivo') || 'Plusvalía';
-        const r = urlParams.get('rango') || 'Inversion';
-        const z = urlParams.get('zona') || 'Asunción';
-        const t = urlParams.get('timing') || 'Inmediato';
+        const nombre = urlParams.get('nombre') || 'Inversor';
+        const objetivo = urlParams.get('objetivo') || 'Plusvalía';
+        const rango = urlParams.get('rango') || 'Inversión';
+        const zona = urlParams.get('zona') || 'Asunción';
+        const timing = urlParams.get('timing') || 'Hoy';
         
-        const message = `Hola Jairo, soy ${n}. Validé mi perfil Alpha en la terminal:
-- Objetivo: ${o}
-- Rango: ${r}
-- Zona: ${z}
-- Timing: ${t}
-Deseo mi hoja de ruta estratégica para TownCenter.`;
+        // CONSTRUIMOS EL MENSAJE
+        const message = `Hola Jairo, soy ${nombre}. Acabo de validar mi perfil Alpha en la terminal:
+- Objetivo: ${objetivo}
+- Rango: ${rango}
+- Zona: ${zona}
+- Timing: ${timing}
+Deseo recibir mi hoja de ruta estratégica.`;
         
+        // LO PONEMOS EN EL BOTÓN
         document.getElementById('btnWhatsapp').href = `https://wa.me/595994325713?text=${encodeURIComponent(message)}`;
     </script>
 </body>

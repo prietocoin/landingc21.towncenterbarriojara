@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Perfil Alpha Validado! | Jairo Prieto</title>
+    
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -12,78 +16,53 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1600368874352763');
     fbq('track', 'PageView');
-    fbq('track', 'Lead', {
-        content_name: 'TownCenter Barrio Jara',
-        content_category: 'Real Estate'
-    }); 
+    fbq('track', 'Lead', { content_name: 'Terminal Plusvalía', content_category: 'Real Estate' });
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1600368874352763&ev=PageView&noscript=1"
-    /></noscript>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Gracias! | Century 21 Bonanza</title>
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%20%2290%22>🏢</text></svg>">
-    
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1600368874352763&ev=PageView&noscript=1"/></noscript>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        c21gold: '#c4a47c',
-                        c21black: '#000000',
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
         body { font-family: 'Montserrat', sans-serif; }
-        .fade-in { animation: fadeIn 0.8s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-white text-c21black antialiased min-h-screen flex flex-col items-center justify-center p-6 text-center">
+<body class="bg-white text-black min-h-screen flex flex-col items-center justify-center p-6 text-center">
 
-    <div class="fade-in">
-        <div class="mb-8 text-c21gold animate-bounce">
-            <i class="fas fa-check-circle text-6xl md:text-8xl"></i>
-        </div>
+    <div class="mb-6 text-[#c4a47c] animate-bounce">
+        <i class="fas fa-check-circle text-7xl md:text-8xl"></i>
+    </div>
 
-        <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-4">
-            ¡Perfil <span class="text-c21gold">Validado!</span>
-        </h1>
-        
-        <p class="text-sm md:text-base font-light tracking-[0.2em] uppercase text-gray-500 mb-10 max-w-md mx-auto">
-            Tus datos han sido registrados en la terminal. Para recibir la hoja de ruta de <span class="font-bold text-c21black">Plusvalía</span>, haz clic en el botón de abajo.
-        </p>
+    <h1 class="text-4xl md:text-6xl font-black uppercase mb-4 tracking-tighter">¡Perfil <span class="text-[#c4a47c]">Alpha</span> Listo!</h1>
+    <p class="text-gray-500 text-xs md:text-sm tracking-[0.2em] uppercase mb-10 max-w-sm">Tus datos han sido registrados con éxito. Pulsa el botón para recibir tu hoja de ruta.</p>
 
-        <div class="flex justify-center">
-            <a id="btnWhatsapp" href="#" class="bg-c21black text-c21gold px-10 py-5 text-xs font-bold tracking-[0.3em] uppercase hover:bg-c21gold hover:text-white transition-all shadow-2xl flex items-center gap-4 rounded-sm scale-110 active:scale-95">
-                <i class="fab fa-whatsapp text-xl"></i>
-                Abrir WhatsApp Ahora
-            </a>
-        </div>
+    <a id="btnWhatsapp" href="#" class="bg-black text-[#c4a47c] px-10 py-5 text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#c4a47c] hover:text-white transition-all shadow-2xl flex items-center gap-4 rounded-sm scale-110">
+        <i class="fab fa-whatsapp text-xl"></i>
+        Abrir WhatsApp Ahora
+    </a>
 
-        <div class="mt-24 flex flex-col items-center opacity-60">
-            <span class="text-lg font-bold tracking-tighter leading-none uppercase">Century 21</span>
-            <span class="text-[9px] font-light text-gray-400 tracking-[0.2em] uppercase">Bonanza // Jairo Prieto</span>
-        </div>
+    <div class="mt-24 flex flex-col items-center opacity-40">
+        <span class="text-lg font-bold tracking-tighter uppercase">Century 21</span>
+        <span class="text-[9px] font-light tracking-[0.2em] uppercase">Bonanza // Jairo Prieto</span>
     </div>
 
     <script>
-        // Capturar parámetros de la URL
         const urlParams = new URLSearchParams(window.location.search);
-        const nombre = urlParams.get('nombre') || 'Inversor';
-        const objetivo = urlParams.get('objetivo') || 'Plusvalía';
+        const d = {
+            nombre: urlParams.get('nombre') || 'Inversor',
+            objetivo: urlParams.get('objetivo') || 'Plusvalía',
+            rango: urlParams.get('rango') || 'General',
+            zona: urlParams.get('zona') || 'Asunción',
+            timing: urlParams.get('timing') || 'Análisis'
+        };
         
-        // Configurar el link de WhatsApp dinámico
         const phone = "595994325713";
-        const message = `Hola Jairo, soy ${nombre}. Acabo de validar mi perfil en la terminal con objetivo: ${objetivo}. Deseo recibir la ficha técnica de TownCenter y la hoja de ruta de plusvalía.`;
+        const message = `Hola Jairo, soy ${d.nombre}. Validé mi perfil Alpha:
+- Objetivo: ${d.objetivo}
+- Rango: ${d.rango}
+- Zona: ${d.zona}
+- Timing: ${d.timing}
+Deseo mi hoja de ruta estratégica para TownCenter.`;
         
         document.getElementById('btnWhatsapp').href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     </script>

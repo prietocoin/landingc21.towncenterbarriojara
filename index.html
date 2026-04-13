@@ -33,10 +33,10 @@
         .name-input { background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 12px; padding: 20px; color: white; width: 100%; font-size: 1.2rem; margin-bottom: 20px; outline: none; }
         .option-card { background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); border-radius: 12px; padding: 18px; margin-bottom: 12px; cursor: pointer; transition: 0.3s; }
         .option-card:hover { border-color: var(--gold); background: rgba(197, 160, 89, 0.1); transform: translateX(5px); }
+        .option-card b { color: var(--gold); display: block; text-transform: uppercase; }
         .btn-action { background: linear-gradient(135deg, var(--gold) 0%, #9c7e46 100%); color: #000; border: none; padding: 20px 40px; font-weight: 900; border-radius: 8px; text-transform: uppercase; width: 100%; }
         .investment-modules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 30px; }
         .module-item b { display: block; color: var(--gold); font-size: 0.8rem; }
-        .module-item span { font-size: 0.65rem; color: #8892b0; }
     </style>
 </head>
 <body>
@@ -102,13 +102,17 @@
             document.querySelectorAll('.step-container').forEach(x => x.classList.remove('active')); 
             document.getElementById('step-'+s).classList.add('active'); 
         }
+
         async function processLead() {
             const btn = document.getElementById('btn-final');
             btn.innerHTML = "PROCESANDO..."; btn.disabled = true;
+
+            // 1. Envío a n8n (reemplaza con tu URL)
             try {
-                // Reemplaza con tu URL de n8n si la tienes lista
                 await fetch("TU_WEBHOOK_N8N", { method: 'POST', mode: 'no-cors', body: JSON.stringify(leadData) });
-            } catch (e) { console.log("n8n offline"); }
+            } catch (e) { console.log("n8n omitido"); }
+
+            // 2. EL CAMBIO CLAVE: Redirigir a gracias.html con los datos
             const params = new URLSearchParams(leadData).toString();
             window.location.href = "gracias.html?" + params;
         }

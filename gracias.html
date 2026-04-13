@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Perfil Validado! | Century 21 Bonanza</title>
+    <title>¡Perfil Alpha Validado! | Century 21 Bonanza</title>
     
     <script>
     !function(f,b,e,v,n,t,s)
@@ -16,10 +16,10 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1600368874352763');
     fbq('track', 'PageView');
-    fbq('track', 'Lead', { content_name: 'Terminal Plusvalia' });
+    fbq('track', 'Lead'); // MARCAMOS EL LEAD AQUÍ
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1600368874352763&ev=PageView&noscript=1"/></noscript>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -34,11 +34,11 @@
     </div>
 
     <h1 class="text-4xl md:text-6xl font-black uppercase mb-4 tracking-tighter leading-none">¡Perfil <span class="text-[#c4a47c]">Alpha</span> Listo!</h1>
-    <p class="text-gray-500 text-xs md:text-sm tracking-[0.2em] uppercase mb-10 max-w-sm mx-auto">Tus datos han sido registrados. Haz clic en el botón para recibir la hoja de ruta en WhatsApp.</p>
+    <p class="text-gray-500 text-xs md:text-sm tracking-[0.2em] uppercase mb-10 max-w-sm mx-auto">Tus datos han sido registrados en la terminal. Pulsa el botón para recibir la hoja de ruta estratégica.</p>
     
     <a id="btnWhatsapp" href="#" class="bg-black text-[#c4a47c] px-10 py-5 text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#c4a47c] hover:text-white transition-all shadow-2xl flex items-center gap-4 rounded-sm scale-110 active:scale-95">
         <i class="fab fa-whatsapp text-xl"></i>
-        Abrir Consultoría Ahora
+        Abrir WhatsApp Ahora
     </a>
 
     <div class="mt-24 flex flex-col items-center opacity-40">
@@ -47,21 +47,23 @@
     </div>
 
     <script>
+        // Leemos los parámetros que vienen de la URL
         const urlParams = new URLSearchParams(window.location.search);
         const d = {
             nombre: urlParams.get('nombre') || 'Inversor',
             objetivo: urlParams.get('objetivo') || 'Plusvalía',
             rango: urlParams.get('rango') || 'Análisis',
             zona: urlParams.get('zona') || 'Asunción',
-            timing: urlParams.get('timing') || 'Hoy'
+            timing: urlParams.get('timing') || 'Ahora'
         };
         
+        // Creamos el mensaje final
         const message = `Hola Jairo, soy ${d.nombre}. Validé mi perfil Alpha:
 - Objetivo: ${d.objetivo}
 - Rango: ${d.rango}
 - Zona: ${d.zona}
 - Timing: ${d.timing}
-Deseo mi hoja de ruta estratégica para TownCenter.`;
+Deseo mi hoja de ruta estratégica.`;
         
         document.getElementById('btnWhatsapp').href = `https://wa.me/595994325713?text=${encodeURIComponent(message)}`;
     </script>
